@@ -10,10 +10,13 @@
 
 <script>
 const msgs = [
-  `There's nothing here.`,
+  `Nothing here, but me.`,
   `How did we get here?`,
   `That's a Four-Oh-Four.`,
-  `Looks like we've got some broken links.`
+  `Looks like we've got some broken links.`,
+  `Whoooooooooooooooops!`,
+  `Who am I? Where did I come from? Where will I go?`,
+  `The page is having a rest ...`
 ]
 
 export default {
