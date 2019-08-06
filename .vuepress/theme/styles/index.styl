@@ -30,6 +30,7 @@ body
   background-color #fff
   box-sizing border-box
   border-bottom 1px solid $borderColor
+  box-shadow 0 0 0.9rem 0 alpha($textColor, 15%)
 
 .sidebar-mask
   position fixed
@@ -115,7 +116,7 @@ h1, h2, h3, h4, h5, h6
 
   {$contentClass}:not(.custom) > &
     margin-top (0.5rem - $navbarHeight)
-    padding-top ($navbarHeight + 1rem)
+    padding-top ($navbarHeight + 2rem)
     margin-bottom 0
 
     &:first-child
