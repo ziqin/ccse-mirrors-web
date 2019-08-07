@@ -4,7 +4,7 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'SUSTech CCSE Open Source Mirrors',
+      title: 'CCSE Open Source Mirrors',
       description: 'In-campus open source mirror site supported by SUSTech Center for Computational Science and Engineering',
     }
   },

@@ -5,6 +5,8 @@
     "build": "vuepress build ."
   },
   "dependencies": {
+    "moment": "^2.24.0",
+    "vue-awesome": "^3.5.4",
     "vuepress": "^1.0.3"
   }
 }
