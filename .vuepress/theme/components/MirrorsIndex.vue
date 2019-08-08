@@ -30,19 +30,16 @@
         <tr
           v-for="mirror in mirrors"
           :class="{
-            working: isMirrorWorking(mirror),
-            problematic: isMirrorProblematic(mirror)
+            working: mirror.alert === 'info',
+            problematic: mirror.alert === 'warn' || mirror.alert === 'error'
           }"
         >
           <td>
             <a :href="`/help/${mirror.name}.html`">{{ mirror.name }}</a>
           </td>
-          <td>{{ mirror.lastUpdated.format("YYYY/MM/DD HH:mm") }}</td>
+          <td>{{ mirror.lastUpdated }}</td>
           <td>
-            <Badge v-if="mirror.status !== 'success'"
-              vertical="middle"
-              :type="isMirrorWorking(mirror) ? 'tip' : 'warn'"
-            >
+            <Badge v-if="mirror.alert !== null" :type="mirror.alert" vertical="middle">
               {{ mirror.status }}
             </Badge>
           </td>
@@ -57,9 +54,8 @@
 
 
 <script>
-// TODO: Loading
 import { setInterval } from "timers"
-import moment from "moment"
+import * as data from "../util/tunasyncAdapter"
 import "vue-awesome/icons/th-list"
 import "vue-awesome/icons/folder-open"
 import "vue-awesome/icons/search"
@@ -72,7 +68,7 @@ export default {
 
   data() {
     return {
-      jobs: [],
+      jobsRawData: [],
       isLoading: true,
       isFocusingFilter: false,
       searchKey: ""
@@ -81,16 +77,13 @@ export default {
 
   computed: {
     mirrors() {
+      var jobsRawData
       if (this.searchKey === "") {
-        var jobs = this.jobs
+        jobsRawData = this.jobsRawData
       } else {
-        var jobs = this.jobs.filter(j => j.name.toLowerCase().startsWith(this.searchKey.toLowerCase()))
+        jobsRawData = this.jobsRawData.filter(j => data.doesJobMatch(j, this.searchKey))
       }
-      return jobs.map(j => ({
-        name: j.name,
-        status: j.status,
-        lastUpdated: moment(j.last_update, "YYYY-MM-DD HH:mm:ss ZZ")
-      }))
+      return jobsRawData.map(j => data.job2Mirror(j))
     },
 
     searchPlaceHolder() {
@@ -100,40 +93,16 @@ export default {
 
   methods: {
     updateMirrors() {
-      // fetch(this.$withBase("/api/jobs"))
-      fetch("//mirrors.sustech.rocks/api/jobs")  // for debug
+      fetch(data.apiEndpoint)
         .then(resp => {
           if (resp.status === 200) {
             this.isLoading = false
-            resp.json().then(data => this.jobs = data)
+            resp.json().then(data => this.jobsRawData = data)
           } else {
-            console.error("Failed to load mirror jobs. Status code: " + resp.status)
+            console.error("Failed to load mirror jobsRawData. Status code: " + resp.status)
           }
         })
         .catch(err => console.error(err))
-    },
-
-    isMirrorWorking(mirror) {
-      switch (mirror.status) {
-        case "syncing":
-        case "pre-syncing":
-          return true
-        default:
-          return false
-      }
-    },
-
-    isMirrorProblematic(mirror) {
-      switch (mirror.status) {
-        case "failed":
-        case "paused":
-        case "diabled":
-        case "none":
-        case "":
-          return true
-        default:
-          return false
-      }
     }
   },
 
