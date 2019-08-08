@@ -1,1 +1,5 @@
+---
+sidebarShare: true
+---
+
 # Help Manuals

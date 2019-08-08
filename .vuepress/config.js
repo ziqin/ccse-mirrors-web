@@ -10,17 +10,18 @@ module.exports = {
   },
   
   themeConfig: {
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'News', link: '/news/' },
-      { text: 'Help', link: '/help/' },
-      { text: 'Status', link: '/status' },
-      { text: 'SUSTech CCSE', link: 'http://hpc.sustech.edu.cn/' }
-    ],
-    sidebar: {
-      '/help/': [
-        ''
-      ]
+    locales: {
+      '/': {
+        nav: [
+          { text: 'Home', link: '/' },
+          { text: 'News', link: '/news/' },
+          { text: 'Help', link: '/help/' },
+          { text: 'Status', link: '/status' },
+          { text: 'SUSTech CCSE', link: 'http://hpc.sustech.edu.cn/' }
+        ],
+        sidebar: {
+        }
+      }
     },
     search: false,
     lastUpdated: 'Last Updated',

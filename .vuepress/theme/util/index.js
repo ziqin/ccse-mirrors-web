@@ -133,6 +133,15 @@ export function resolveSidebarItems (page, regularPath, site, localePath) {
     return resolveHeaders(page)
   }
 
+  if (page.frontmatter.sidebarShare === true) {
+    const dir = page.regularPath.match(/^(.*\/)(.+\.html)?$/)[1]
+    const sidebarSharedPages = pages
+      .filter(p => p.regularPath.startsWith(dir))
+      .map(p => p.regularPath.match(`^${dir}((.*)\.html)?$`)[2] || "")
+      .sort()
+    return sidebarSharedPages.map(p => resolveItem(p, pages, dir))
+  }
+
   const sidebarConfig = localeConfig.sidebar || themeConfig.sidebar
   if (!sidebarConfig) {
     return []
