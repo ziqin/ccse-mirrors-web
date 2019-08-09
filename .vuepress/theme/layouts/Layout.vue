@@ -29,10 +29,7 @@
       />
     </Sidebar>
 
-    <Home v-if="$page.frontmatter.home"/>
-
     <Page
-      v-else
       :sidebar-items="sidebarItems"
     >
       <slot
@@ -48,14 +45,13 @@
 </template>
 
 <script>
-import Home from '@theme/components/Home.vue'
 import Navbar from '@theme/components/Navbar.vue'
 import Page from '@theme/components/Page.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
 import { resolveSidebarItems } from '../util'
 
 export default {
-  components: { Home, Page, Sidebar, Navbar },
+  components: { Page, Sidebar, Navbar },
 
   data () {
     return {

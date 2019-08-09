@@ -1,10 +1,11 @@
 <template>
-  <div>
-    <h2 v-if="title !== undefined">
-      <v-icon name="th-list" scale="1.25"/>&nbsp;&nbsp;{{ title }}
+  <main>
+    <h2>
+      <v-icon name="th-list" scale="1.25"/>&nbsp;
+      {{ title || "Index of Mirrors" }}
     </h2>
     <div v-if="isLoading" id="loading-container">
-      <v-icon name="spinner" scale="2.5" pulse/>
+      <v-icon name="spinner" scale="2.5" spin/>
     </div>
     <table v-else>
       <thead>
@@ -35,7 +36,7 @@
           }"
         >
           <td>
-            <a :href="`/help/${mirror.name}.html`">{{ mirror.name }}</a>
+            <router-link :to="`/help/${mirror.name}.html`">{{ mirror.name }}</router-link>
           </td>
           <td>{{ mirror.lastUpdated }}</td>
           <td>
@@ -49,7 +50,7 @@
         </tr>
       </tbody>
     </table>
-  </div>
+  </main>
 </template>
 
 
