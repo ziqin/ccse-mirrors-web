@@ -1,15 +1,9 @@
 <template>
   <div class="theme-container" :class="pageClasses" @touchstart="onTouchStart" @touchend="onTouchEnd">
     <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
-
     <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
-
     <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar"/>
-
-    <HomePage :sidebar-items="sidebarItems">
-      <slot name="page-top" slot="top"/>
-      <slot name="page-bottom" slot="bottom"/>
-    </HomePage>
+    <HomePage :sidebar-items="sidebarItems" :pages="$site.pages"/>
   </div>
 </template>
 

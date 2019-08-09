@@ -8,8 +8,8 @@
       </div>
 
       <div class="right-sidebar">
+        <NewsPanel :pages="pages" basePath="/news/"/>
       </div>
-
     </div>
 
     <!-- <Content class="theme-default-content"/> -->
@@ -22,11 +22,12 @@
 
 <script>
 import MirrorsIndex from '@theme/components/MirrorsIndex.vue'
+import NewsPanel from '@theme/components/NewsPanel.vue'
 
 export default {
-  components: { MirrorsIndex },
+  components: { MirrorsIndex, NewsPanel },
 
-  props: ['sidebarItems'],
+  props: ['sidebarItems', 'pages'],
 
   computed: {
   },
@@ -54,11 +55,12 @@ $MQMedium = 1279px
   max-width 72rem
 
 .main-content
-  width 46rem
+  width 44rem
 
 .right-sidebar
   width 22rem
-  margin-left 2rem
+  margin-left 4rem
+  padding 3.25rem 0 2rem 0
 
 @media (max-width: $MQMedium)
   .content-container
@@ -67,6 +69,7 @@ $MQMedium = 1279px
     width 38rem
   .right-sidebar
     width 16rem
+    margin-left 2rem
 
 @media (max-width: $MQNarrow)
   .content-container

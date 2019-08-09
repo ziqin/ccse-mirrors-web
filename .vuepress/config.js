@@ -8,6 +8,22 @@ module.exports = {
       description: 'In-campus open source mirror site supported by SUSTech Center for Computational Science and Engineering',
     }
   },
+
+  plugins: [
+    [
+      '@vuepress/blog',
+      {
+        directories: [
+          {
+            id: 'news', dirname: '_news',
+            path: '/news/', itemPermalink: '/news/:year/:month/:slug.html',
+            layout: 'IndexNews', itemLayout: 'Layout',
+            pagination: { lengthPerPage: 9, layout: 'IndexNews' }
+          }
+        ]
+      }
+    ]
+  ],
   
   themeConfig: {
     locales: {
