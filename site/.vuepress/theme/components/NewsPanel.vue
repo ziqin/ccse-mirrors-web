@@ -1,13 +1,16 @@
 <template>
   <main class="news-panel">
     <h3>
-      <v-icon name="bullhorn" scale="1.25"/>&nbsp;
+      <v-icon name="radio"/>&nbsp;
       {{ (text ? text.title : null) || "What's Up" }}
     </h3>
     <div class="panel-content">
       <ul>
         <li v-for="post in newsPosts">
-          <v-icon name="quote-left" scale="0.75" class="quote-icon"/>&nbsp;
+          <!-- <v-icon name="quote-left" class="quote-icon"/> -->
+          <svg class="quote-icon fa-icon" aria-hidden="true" width="12" height="12" viewBox="0 0 512 512" focusable="false">
+            <path d="M464 256c26.5 0 48 21.5 48 48v128c0 26.5-21.5 48-48 48h-128c-26.5 0-48-21.5-48-48v-240c0-88.4 71.6-160 160-160h8c13.3 0 24 10.7 24 24v48c0 13.3-10.7 24-24 24h-8c-35.3 0-64 28.7-64 64v64h80zM176 256c26.5 0 48 21.5 48 48v128c0 26.5-21.5 48-48 48h-128c-26.5 0-48-21.5-48-48v-240c0-88.4 71.6-160 160-160h8c13.3 0 24 10.7 24 24v48c0 13.3-10.7 24-24 24h-8c-35.3 0-64 28.7-64 64v64h80z"></path>
+          </svg>
           <router-link class="news-title" :to="post.path">{{ post.title }}</router-link>
           <div class="meta" v-if="post.date">
             {{ post.date }}
@@ -15,7 +18,10 @@
         </li>
       </ul>
       <div class="read-more">
-        <router-link :to="basePath || '/news/'">More <v-icon name="arrow-circle-right" style="margin-bottom: -2px"/></router-link>
+        <router-link :to="basePath || '/news/'">
+          More 
+          <v-icon name="arrow-right-circle"/>
+        </router-link>
       </div>
     </div>
   </main>
@@ -24,9 +30,6 @@
 
 <script>
 import moment from "moment"
-import "vue-awesome/icons/bullhorn"
-import "vue-awesome/icons/arrow-circle-right"
-import "vue-awesome/icons/quote-left"
 
 export default {
   props: {
@@ -59,9 +62,13 @@ export default {
   padding 0
 
   h3
-    padding 1rem 0.5rem
+    padding 1rem 0
     margin 0
     border-bottom 2px solid $accentColor
+
+    .icon
+      margin-bottom -6px
+      height 28px
   
   .panel-content
     padding 0.5rem 0 1rem 2rem
@@ -82,6 +89,8 @@ export default {
 
         .quote-icon
           margin-left -1.5rem
+          margin-right 0.5rem
+          font-size: 0.75em
         
         .news-title
           color $textColor
@@ -92,6 +101,10 @@ export default {
 .read-more
   padding 1rem 0 0 0
   text-align right
+
+  .icon
+    height 20px
+    margin-bottom -4px
 
 </style>
 

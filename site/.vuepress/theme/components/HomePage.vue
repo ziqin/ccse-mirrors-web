@@ -1,21 +1,19 @@
 <template>
-  <main class="home-page">
-    
+  <main id="home-page">
     <div class="content-container">
-
       <div class="main-content">
         <MirrorsIndex class="mirrors-index" title="Index of Mirrors"/>
       </div>
-
       <div class="right-sidebar">
         <NewsPanel :pages="pages" basePath="/news/"/>
       </div>
     </div>
-
-    <!-- <Content class="theme-default-content"/> -->
-
-    <footer class="foot">
-      Supported by SUSTech Center for Computational Science and Engineering
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <Content/>
+        </div>
+      </div>
     </footer>
   </main>
 </template>
@@ -26,67 +24,77 @@ import NewsPanel from '@theme/components/NewsPanel.vue'
 
 export default {
   components: { MirrorsIndex, NewsPanel },
-
-  props: ['sidebarItems', 'pages'],
-
-  computed: {
-  },
-
-  methods: {
-  }
+  props: ['sidebarItems', 'pages']
 }
 </script>
 
 
 <style lang="stylus" scoped>
-@require '../styles/wrapper.styl'
-
 $MQMedium = 1279px
 
-.home-page
-  padding-bottom 2rem
-  display block
-
-.content-container
-  display flex
-  flex-flow row wrap
-  margin $navbarHeight auto 0 auto
-  padding 2rem
+$wideWrapper
   max-width 72rem
+  margin 0 auto
+  padding 2rem 2.5rem
+  @media (max-width: $MQMedium)
+    max-width 56rem
+  @media (max-width: $MQNarrow)
+    max-width 45rem
+    padding 1.5rem
 
-.main-content
+$leftWrapper
   width 44rem
+  @media (max-width: $MQMedium)
+    width 38rem
+  @media (max-width: $MQNarrow)
+    width 100%
 
-.right-sidebar
+$rightWrapper
   width 22rem
   margin-left 4rem
-  padding 3.25rem 0 2rem 0
-
-@media (max-width: $MQMedium)
-  .content-container
-    max-width 56rem
-  .main-content
-    width 38rem
-  .right-sidebar
+  @media (max-width: $MQMedium)
     width 16rem
     margin-left 2rem
-
-@media (max-width: $MQNarrow)
-  .content-container
-    max-width 45rem
-    padding 1rem
-  .main-content
-    width 100%
-  .right-sidebar
+  @media (max-width: $MQNarrow)
     margin-left 0
     width 100%
+
+#home-page
+  display block
+  position relative
+  min-height 100vh
+
+.content-container
+  @extend $wideWrapper
+  display flex
+  flex-flow row wrap
+  margin-top $navbarHeight
+  padding-bottom ($footerHeight + 2.5rem)
+
+.main-content
+  @extend $leftWrapper
+
+.right-sidebar
+  @extend $rightWrapper
+  padding 3.25rem 0 2rem 0
+  @media (max-width: $MQNarrow)
+    padding 0
 
 .mirrors-index
   width 100%
 
-.foot
-  @extend $wrapper
-  padding-top 1rem
-  padding-bottom 1rem
+.footer
+  position absolute
+  bottom 0
+  width 100%
+  height $footerHeight
+  background-color $sustechDark
 
+.footer-container
+  @extend $wideWrapper
+  color lighten($sustechGreen, 80%)
+
+.footer-left
+  @extend $leftWrapper
+  padding 0.5rem 0
 </style>

@@ -1,4 +1,4 @@
-import Icon from "vue-awesome/components/Icon"
+import feather from 'vue-icon'
 
 export default ({
   Vue,
@@ -6,5 +6,5 @@ export default ({
   router,
   siteData
 }) => {
-  Vue.component('v-icon', Icon)
+  Vue.use(feather, 'v-icon')
 }

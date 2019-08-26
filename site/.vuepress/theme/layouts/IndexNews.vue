@@ -31,7 +31,9 @@
 
     <main class="news-index-page">
       <div class="page-content-container">
-        <h1 class="page-title"><v-icon name="bullhorn" scale="1.8"/>&nbsp; What's Up?</h1>
+        <h1 class="page-title">
+          <v-icon name="radio"/>&nbsp;What's Up?
+        </h1>
         <ul>
           <li v-for="post in $pagination.pages">
             <div class="news-preview">
@@ -41,8 +43,8 @@
             <div class="post-meta">
               <v-icon v-if="post.frontmatter.author" name="user"/> {{ post.frontmatter.author }}
               <span v-if="post.frontmatter.author">&nbsp;&nbsp;</span>
-              <v-icon v-if="post.frontmatter.date" name="calendar-alt"/> {{ displayDate(post.frontmatter.date) }}
-              <router-link :to="post.path" class="read-more">Read More <v-icon name="arrow-circle-right"/></router-link>
+              <v-icon v-if="post.frontmatter.date" name="calendar"/> {{ displayDate(post.frontmatter.date) }}
+              <router-link :to="post.path" class="read-more">Read More <v-icon name="arrow-right-circle"/></router-link>
             </div>
           </li>
         </ul>
@@ -62,10 +64,6 @@ import Sidebar from '@theme/components/Sidebar.vue'
 import { Pagination } from '@vuepress/plugin-blog/lib/client/components'
 import { resolveSidebarItems } from '../util'
 import moment from "moment"
-import "vue-awesome/icons/arrow-circle-right"
-import "vue-awesome/icons/bullhorn"
-import "vue-awesome/icons/calendar-alt"
-import "vue-awesome/icons/user"
 
 export default {
   components: { Page, Sidebar, Navbar, Pagination },
@@ -178,6 +176,10 @@ export default {
   @extend $wrapper
   margin-top $navbarHeight
 
+  .page-title .icon
+      margin-bottom -10px
+      height 42px
+
   ul
     list-style-type none
     padding-left 0
@@ -192,8 +194,9 @@ export default {
         border-top 1px solid alpha($textColor, 15%)
         padding 1rem 1.5rem
 
-        svg
-          margin-bottom -2px
+        .icon
+          margin-bottom -4px
+          height 20px
 
         .read-more
           float: right

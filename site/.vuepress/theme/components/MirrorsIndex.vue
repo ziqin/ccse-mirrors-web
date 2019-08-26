@@ -1,11 +1,10 @@
 <template>
   <main>
     <h2>
-      <v-icon name="th-list" scale="1.25"/>&nbsp;
-      {{ title || "Index of Mirrors" }}
+      <v-icon name="package"/>&nbsp; {{ title || "Index of Mirrors" }}
     </h2>
     <div v-if="isLoading" id="loading-container">
-      <v-icon name="spinner" scale="2.5" spin/>
+      <v-icon name="refresh-cw"/>
     </div>
     <table v-else>
       <thead>
@@ -19,12 +18,12 @@
                 @focus="isFocusingFilter = true"
                 @blur="isFocusingFilter = false"
               />
-              <v-icon name="search" scale="0.9" id="search-icon"/>
+              <v-icon name="search" height="16"/>
             </div>
           </th>
-          <th>Last Updated</th>
-          <th>Status</th>
           <th>Files</th>
+          <th>Status</th>
+          <th>Last Updated</th>
         </tr>
       </thead>
       <tbody>
@@ -38,15 +37,15 @@
           <td>
             <router-link :to="`/help/${mirror.name}.html`">{{ mirror.name }}</router-link>
           </td>
-          <td>{{ mirror.lastUpdated }}</td>
+          <td>
+            <a :href="`/${mirror.name}/`"><v-icon name="folder"/></a>
+          </td>
           <td>
             <Badge v-if="mirror.alert !== null" :type="mirror.alert" vertical="middle">
               {{ mirror.status }}
             </Badge>
           </td>
-          <td>
-            <a :href="`/${mirror.name}/`"><v-icon name="folder-open"/></a>
-          </td>
+          <td>{{ mirror.lastUpdated }}</td>
         </tr>
       </tbody>
     </table>
@@ -57,10 +56,6 @@
 <script>
 import { setInterval } from "timers"
 import * as data from "../util/tunasyncAdapter"
-import "vue-awesome/icons/th-list"
-import "vue-awesome/icons/folder-open"
-import "vue-awesome/icons/search"
-import "vue-awesome/icons/spinner"
 
 export default {
   props: {
@@ -109,7 +104,7 @@ export default {
 
   mounted() {
     this.updateMirrors()
-    setInterval(() => this.updateMirrors(), 120000)  // 2 minutes
+    setInterval(() => this.updateMirrors(), 60000)  // 1 minute
   }
 }
 </script>
@@ -124,12 +119,25 @@ h2
   border none
   margin-bottom 0
 
+  svg
+    height 32px
+    width 32px
+    margin-bottom -6px
+
+@keyframes spin
+  from
+    transform rotate(0deg)
+  to
+    transform rotate(360deg)
+
 #loading-container
   width 100%
   text-align center
 
-  svg
+  .icon
+    animation spin 1.5s linear infinite
     margin 4rem
+    height 64px
 
 table
   table-layout fixed
@@ -159,20 +167,35 @@ table
     border none
 
     &:nth-child(1)
-      width 42%
+      width 40%
+
+      @media (max-width: $MQNarrow)
+        width 30%
 
     &:nth-child(2)
-      width 35%
-    
+      width 15%
+      text-align center
+
+      .icon
+        height 16px
+        margin-bottom -3px
+
     &:nth-child(3)
-      width 13%
+      text-align center
+      width 20%
+
+      @media (max-width: $MQNarrow)
+        display: none
 
     &:nth-child(4)
-      width 10%
-      text-align center
-    
+      text-align right
+      width 25%
+
+      @media (max-width: $MQNarrow)
+        width 35%
+
   tbody td
-    &:nth-child(1) a, &:nth-child(4) a
+    &:nth-child(1) a, &:nth-child(2) a
       color lighten($textColor, 15%)
 
 #filter
@@ -198,7 +221,8 @@ table
     &:focus
       width 6rem
 
-  #search-icon
+  .icon
     margin 0 0 -3px 0.25rem
+    height 16px
 
 </style>

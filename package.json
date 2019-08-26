@@ -7,7 +7,7 @@
   "devDependencies": {
     "@vuepress/plugin-blog": "^1.2.4",
     "moment": "^2.24.0",
-    "vue-awesome": "^3.5.4",
+    "vue-icon": "^2.1.1",
     "vuepress": "^1.0.3"
   }
 }

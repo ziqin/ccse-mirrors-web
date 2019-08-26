@@ -1,7 +1,7 @@
 import moment from "moment"
 
-// export const apiEndpoint = "/api/jobs";
-export const apiEndpoint = "//mirrors.sustech.rocks/api/jobs";  // for dev
+export const apiEndpoint = "/api/jobs"
+// export const apiEndpoint = "//mirrors.sustech.rocks/api/jobs"
 
 export function doesJobMatch(job, key) {
   return job.name.toLowerCase().startsWith(key.toLowerCase())
@@ -30,6 +30,6 @@ export function job2Mirror(job) {
     name: job.name,
     status: job.status,
     alert: alert,
-    lastUpdated: moment(job.last_update, "YYYY-MM-DD HH:mm:ss ZZ").format("YYYY/MM/DD HH:mm")
+    lastUpdated: moment(job.last_update, "YYYY-MM-DD HH:mm:ss ZZ").fromNow()
   }
 }
