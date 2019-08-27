@@ -96,15 +96,38 @@ In an environment where you have no root access, like SUSTech Taiyi/Qiming HPC o
 
 You can create multiple virtual environments in your home directory so that you can have dependencies of different versions for different projects.
 
-Typically, this approach creates symbolic links for system-wide python.
+``` sh
+# 1. Create a virtual environment
+[user@host ~]$ python3 -m venv ~/venv-torch
+
+# 2. Activate the virtual environment
+[user@host ~]$ source ~/venv-torch/bin/activate
+
+# 3. Now you are in the venv
+(venv-torch) [user@host ~]$ pip install --upgrade pip  # optional
+(venv-torch) [user@host ~]$ pip install torch torchvision
+(venv-torch) [user@host ~]$ python my_awesome_network.py
+
+# 4. Leave the virtual environment
+(venv-torch) [user@host ~]$ deactivate
+[user@host ~]$  # now you've come back
+```
+
+Essentially, this approach creates symbolic links for system-wide python.
 
 Please refer to <https://docs.python.org/3/library/venv.html> for detailed usage.
 
 ### Option 2: Pip User Install
 
-Please refer to <https://pip.pypa.io/en/stable/user_guide/#user-installs> for detailed usage.
+Suppose you're using Python 3.7 and you want to install Numpy. You can simply run:
 
-This method is not suggested if you are sharing an account with others.
+``` sh
+pip install --user numpy  # you may need to use pip3
+```
+
+By default, `numpy` would be installed to `~/.local/lib/python3.7/site-packages/numpy-*`. This method is not suggested if you are sharing an account with others.
+
+Please refer to <https://pip.pypa.io/en/stable/user_guide/#user-installs> for detailed usage.
 
 ### Option 3: Conda virtual environment
 
