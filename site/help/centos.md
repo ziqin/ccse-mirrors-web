@@ -4,6 +4,8 @@ sidebarShare: true
 
 # CentOS Mirror
 
+## Introduction
+
 [CentOS](https://www.centos.org/) is a popular community-driven Linux distribution renowned for its stability and reliability. It is highly compatible with Red Hat Enterprise Linux (RHEL).
 
 ## Backup Existing Configuration

@@ -5,6 +5,8 @@ sidebarDepth: 3
 
 # PyPI Mirror
 
+## Introduction
+
 [PyPI](https://pypi.org/), a.k.a. the Python Package Index, is a centralized "repository of software for the Python programming language".
 
 The PyPI Mirror is synchronized with [pypi.org](https://pypi.org) with [bandersnatch](https://pypi.org/project/bandersnatch/). 
