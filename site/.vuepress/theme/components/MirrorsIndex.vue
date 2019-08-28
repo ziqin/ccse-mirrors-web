@@ -149,7 +149,7 @@ table
   display table
   width 100%
   margin-top 0.5rem
-  
+
   thead tr
     border-top none
     border-bottom 2px solid $accentColor
