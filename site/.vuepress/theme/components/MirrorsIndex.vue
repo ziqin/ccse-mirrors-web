@@ -35,7 +35,8 @@
           }"
         >
           <td>
-            <router-link :to="`/help/${mirror.name}.html`">{{ mirror.name }}</router-link>
+            <router-link v-if="exists(`/help/${mirror.name}.html`)" :to="`/help/${mirror.name}.html`">{{ mirror.name }}</router-link>
+            <span v-else>{{ mirror.name }}</span>
           </td>
           <td>
             <a :href="`/${mirror.name}/`"><v-icon name="folder"/></a>
@@ -99,6 +100,9 @@ export default {
           }
         })
         .catch(err => console.error(err))
+    },
+    exists(path) {
+      return this.$router.resolve(path).resolved.name != null
     }
   },
 
@@ -160,7 +164,7 @@ table
       background-color lighten($sustechOrange, 90%)
 
     &:hover
-      background-color lighten($sustechGreen, 65%)
+      background-color lighten($sustechGreen, 70%)
 
   thead th, tbody td
     text-align left
@@ -196,7 +200,10 @@ table
 
   tbody td
     &:nth-child(1) a, &:nth-child(2) a
-      color lighten($textColor, 15%)
+      color $accentColor
+
+      &:hover
+        color lighten($textColor, 10%)
 
 #filter
   float right
