@@ -33,7 +33,7 @@ deb https://mirrors.sustech.rocks/ubuntu/ bionic-security main restricted univer
 # deb-src https://mirrors.sustech.rocks/ubuntu/ bionic-proposed main restricted universe multiverse
 ```
 
-## Refresh Repository Index
+## Refresh Repository Indexes
 
 ``` sh
 sudo apt-get update
