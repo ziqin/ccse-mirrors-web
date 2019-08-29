@@ -1,3 +1,5 @@
+const moment = require('moment')
+
 module.exports = {
   base: '/',
 
@@ -26,10 +28,8 @@ module.exports = {
     [
       '@vuepress/last-updated',
       {
-        transformer: (timestamp, lang) => {
-          const moment = require('moment')
-          moment.locale(lang)
-          return moment(timestamp).fromNow()
+        transformer: (timestamp) => {
+          return moment(timestamp).format('YYYY-MM-DD HH:mm')
         }
       }
     ],
