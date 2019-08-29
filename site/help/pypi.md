@@ -1,6 +1,8 @@
 ---
 sidebarShare: true
 sidebarDepth: 3
+prev: false
+next: false
 ---
 
 # PyPI Mirror

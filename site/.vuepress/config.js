@@ -22,9 +22,20 @@ module.exports = {
           }
         ]
       }
-    ]
+    ],
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp, lang) => {
+          const moment = require('moment')
+          moment.locale(lang)
+          return moment(timestamp).fromNow()
+        }
+      }
+    ],
+    '@vuepress/back-to-top'
   ],
-  
+
   themeConfig: {
     locales: {
       '/': {
@@ -39,6 +50,10 @@ module.exports = {
         }
       }
     },
+    docsRepo: 'ziqin/ccse-mirrors-web',
+    docsDir: 'site',
+    editLinks: true,
+    editLinkText: 'Edit on GitHub',
     search: false,
     lastUpdated: 'Last Updated',
     serviceWorker: {
@@ -49,7 +64,7 @@ module.exports = {
   markdown: {
     lineNumbers: false,
     toc: {
-      includeLevel: [2, 3]
+      includeLevel: [2, 3, 4]
     }
   }
 }

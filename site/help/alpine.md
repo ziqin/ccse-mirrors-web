@@ -1,5 +1,7 @@
 ---
 sidebarShare: true
+prev: false
+next: false
 ---
 
 # Alpine Mirror
@@ -23,7 +25,7 @@ https://mirrors.sustech.rocks/alpine/v3.10/community
 
 You can also specify repositories in a Dockerfile:
 
-``` dockerfile
+``` docker
 FROM alpine:3.10
 
 RUN echo "https://mirrors.sustech.rocks/alpine/v3.10/main" > /etc/apk/repositories ; \

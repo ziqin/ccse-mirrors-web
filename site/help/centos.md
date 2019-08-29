@@ -1,5 +1,7 @@
 ---
 sidebarShare: true
+prev: false
+next: false
 ---
 
 # CentOS Mirror
