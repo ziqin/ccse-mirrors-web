@@ -18,9 +18,7 @@ sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup
 
 ## Edit Configuration
 
-For Ubuntu 18.04 LTS, Write the following lines to `/etc/apt/sources.list`:
-> If you're using other releases, go to [Releases](https://wiki.ubuntu.com/Releases) to find the corresponding codename, and replace `bionic` in the following content.
-> By convension, the codename used in `sources.list` is the first word of the release's codename. (e.g. Ubuntu 19.04 Codename 'Disco Dingo' -> replace `bionic` with `disco`)
+For Ubuntu 18.04 LTS, write the following lines to `/etc/apt/sources.list`:
 
 ```
 deb https://mirrors.sustech.rocks/ubuntu/ bionic main restricted universe multiverse
@@ -36,6 +34,12 @@ deb https://mirrors.sustech.rocks/ubuntu/ bionic-security main restricted univer
 # deb https://mirrors.sustech.rocks/ubuntu/ bionic-proposed main restricted universe multiverse
 # deb-src https://mirrors.sustech.rocks/ubuntu/ bionic-proposed main restricted universe multiverse
 ```
+
+::: tip
+If you're using other releases, go to [Releases](https://wiki.ubuntu.com/Releases) to find the corresponding codename, and replace `bionic` in the above content.
+
+By convention, the codename used in `sources.list` is the first word of the release's codename. For example, the code name of Ubuntu 19.04 is "Disco Dingo", so you should replace `bionic` with `disco`.
+:::
 
 ## Refresh Repository Indexes
 
