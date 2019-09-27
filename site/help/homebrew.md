@@ -16,8 +16,8 @@ This mirror synchronizes Homebrew Formula Index from <https://github.com/Homebre
 
 ``` sh
 git -C $(brew --repo) remote set-url origin https://mirrors.sustech.rocks/homebrew/brew.git
-git -C $(brew --repo homebrew/core) remote set-url origin https://mirrors.sustech.rocks/git/homebrew/homebrew-core.git
-git -C $(brew --repo homebrew/cask) remote set-url origin https://mirrors.sustech.rocks/git/homebrew/homebrew-cask.git
+git -C $(brew --repo homebrew/core) remote set-url origin https://mirrors.sustech.rocks/homebrew/homebrew-core.git
+git -C $(brew --repo homebrew/cask) remote set-url origin https://mirrors.sustech.rocks/homebrew/homebrew-cask.git
 ```
 
 ## Refresh Indexes
