@@ -17,7 +17,7 @@ The PyPI Mirror is synchronized with [pypi.org](https://pypi.org) with [bandersn
 ## TL;DR
 
 ``` sh
-pip install --upgrade pip -index-url https://mirrors.sustech.rocks/pypi/simple
+pip install --upgrade pip --index-url https://mirrors.sustech.rocks/pypi/simple
 pip config set global.index-url https://mirrors.sustech.rocks/pypi/simple
 ```
 
