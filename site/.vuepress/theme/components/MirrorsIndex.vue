@@ -55,6 +55,7 @@
 
 
 <script>
+import { get } from "axios"
 import { setInterval } from "timers"
 import * as data from "../util/tunasyncAdapter"
 
@@ -90,16 +91,12 @@ export default {
 
   methods: {
     updateMirrors() {
-      fetch(data.apiEndpoint)
-        .then(resp => {
-          if (resp.status === 200) {
-            this.isLoading = false
-            resp.json().then(data => this.jobsRawData = data)
-          } else {
-            console.error("Failed to load mirror jobsRawData. Status code: " + resp.status)
-          }
+      get(data.apiEndpoint)
+        .then((resp) => {
+          this.isLoading = false
+          this.jobsRawData = resp.data
         })
-        .catch(err => console.error(err))
+        .catch((err) => console.error(err))
     },
     exists(path) {
       return this.$router.resolve(path).resolved.name != null
@@ -220,9 +217,10 @@ table
 
   input
     border none
+    outline none
     background none
     margin 0
-    width 2.5rem
+    width 3rem
     transition width 0.25s
 
     &:focus
