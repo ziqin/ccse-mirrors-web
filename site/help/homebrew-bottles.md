@@ -8,7 +8,7 @@ next: false
 
 ## Introduction
 
-> Bottles are produced by installing a formula with brew install --build-bottle \<formula\> and then bottling it with brew bottle \<formula\>. This outputs the bottle DSL which should be inserted into the formula file.
+[Bottle](https://docs.brew.sh/Bottles) is Homebrew binary pre-compiled package. If a bottle is available and usable it will be downloaded and poured automatically when you `brew install`.
 
 ## Temporary Use
 

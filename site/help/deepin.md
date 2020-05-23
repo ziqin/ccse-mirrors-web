@@ -8,7 +8,7 @@ next: false
 
 ## Introduction
 
-> [Deepin](https://www.deepin.org/) (stylized as deepin; formerly known as Linux Deepin and Hiweed Linux) is a Linux distribution based on Debian's stable branch.
+> [Deepin](https://en.wikipedia.org/wiki/Deepin) (stylized as deepin; formerly known as Linux Deepin and Hiweed Linux) is a Linux distribution based on Debian's stable branch.
 
 ## Backup Existing Configuration
 

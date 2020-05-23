@@ -8,7 +8,7 @@ next: false
 
 ## Introduction
 
-> [Debian](https://www.debian.org/), also known as Debian GNU/Linux, is a Linux distribution composed of free and open-source software.
+> [Debian](https://en.wikipedia.org/wiki/Debian), also known as Debian GNU/Linux, is a Linux distribution composed of free and open-source software.
 
 ## Backup Existing Configuration
 

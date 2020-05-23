@@ -12,7 +12,7 @@ You should connect to TaiYi using Login04 node.
 
 ## Introduction
 
-> [Anaconda](https://www.anaconda.com/) is a free and open-source distribution of the Python and R programming languages for scientific computing (data science, machine learning applications, large-scale data processing, predictive analytics, etc.), that aims to simplify package management and deployment.
+> [Anaconda](https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)) is a free and open-source distribution of the Python and R programming languages for scientific computing (data science, machine learning applications, large-scale data processing, predictive analytics, etc.), that aims to simplify package management and deployment.
 
 ## Configuration
 
