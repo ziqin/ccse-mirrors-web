@@ -43,8 +43,9 @@ module.exports = {
           { text: 'Home', link: '/' },
           { text: 'News', link: '/news/' },
           { text: 'Help', link: '/help/' },
-          { text: 'Status', link: '/status' },
-          { text: 'SUSTech CCSE', link: 'http://hpc.sustech.edu.cn/' }
+          { text: 'Status', link: '/status/' },
+          { text: 'SUSTech CCSE', link: 'http://hpc.sustech.edu.cn/' },
+          { text: 'SUSTech cra', link: 'https://www.cra.moe/' }
         ],
         sidebar: {
         }
@@ -60,7 +61,7 @@ module.exports = {
       updatePopup: true
     }
   },
-  
+
   markdown: {
     lineNumbers: false,
     toc: {
