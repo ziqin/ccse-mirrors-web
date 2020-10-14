@@ -1,0 +1,20 @@
+name: Build static site
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+      with:
+        fetch-depth: 0
+
+    - name: vuepress-deploy
+      uses: jenkey2011/vuepress-deploy@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        TARGET_REPO: sparkcyf/ccse-mirrors-web
+        TARGET_BRANCH: static-site
+        BUILD_SCRIPT: yarn && yarn build
+        BUILD_DIR: site/.vuepress/dist/
+        TZ: Asia/Shanghai
