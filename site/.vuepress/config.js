@@ -15,15 +15,32 @@ module.exports = {
     [
       '@vuepress/blog',
       {
-        directories: [
-          {
-            id: 'news', dirname: '_news',
-            path: '/news/', itemPermalink: '/news/:year/:month/:slug.html',
-            layout: 'IndexNews', itemLayout: 'Layout',
-            pagination: { lengthPerPage: 9, layout: 'IndexNews' }
+        directories: [{
+          id: 'news',
+          dirname: '_news',
+          path: '/news/',
+          itemPermalink: '/news/:year/:month/:slug.html',
+          layout: 'IndexNews',
+          itemLayout: 'Layout',
+          pagination: {
+            lengthPerPage: 9,
+            layout: 'IndexNews'
           }
-        ]
+        }]
       }
+    ],
+    [
+      '@vuepress/pwa',
+      {
+        serviceWorker: true,
+        updatePopup: {
+          message: "手册内容有更新！",
+          buttonText: "刷新"
+        },
+        generateSWConfig: {
+          importWorkboxFrom: 'local'
+        }
+      },
     ],
     [
       '@vuepress/last-updated',
@@ -39,16 +56,32 @@ module.exports = {
   themeConfig: {
     locales: {
       '/': {
-        nav: [
-          { text: 'Home', link: '/' },
-          { text: 'News', link: '/news/' },
-          { text: 'Help', link: '/help/' },
-          { text: 'Status', link: '/status/' },
-          { text: 'SUSTech CCSE', link: 'http://hpc.sustech.edu.cn/' },
-          { text: 'SUSTech cra', link: 'https://www.cra.moe/' }
+        nav: [{
+            text: 'Home',
+            link: '/'
+          },
+          {
+            text: 'News',
+            link: '/news/'
+          },
+          {
+            text: 'Help',
+            link: '/help/'
+          },
+          {
+            text: 'Status',
+            link: '/status/'
+          },
+          {
+            text: 'SUSTech CCSE',
+            link: 'http://hpc.sustech.edu.cn/'
+          },
+          {
+            text: 'SUSTech cra',
+            link: 'https://www.cra.moe/'
+          }
         ],
-        sidebar: {
-        }
+        sidebar: {}
       }
     },
     docsRepo: 'ziqin/ccse-mirrors-web',
