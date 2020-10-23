@@ -13,7 +13,7 @@ jobs:
       uses: jenkey2011/vuepress-deploy@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        TARGET_REPO: sparkcyf/ccse-mirrors-web
+        TARGET_REPO: SUSTech-CRA/ccse-mirrors-web
         TARGET_BRANCH: static-site
         BUILD_SCRIPT: yarn && yarn build
         BUILD_DIR: site/.vuepress/dist/
