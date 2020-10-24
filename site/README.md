@@ -6,4 +6,4 @@ layout: HomeLayout
 
 _Powered by [tunasync](https://github.com/ziqin/tunasync) and [ccse-mirrors-web](https://github.com/ziqin/ccse-mirrors-web)_
 
-_Supported by [SUSTech Center for Computational Science and Engineering](http://hpc.sustech.edu.cn/)_
+_Supported by [SUSTech Center for Computational Science and Engineering](https://hpc.sustech.edu.cn/) & [SUSTech Computer Research Association](https://www.cra.moe)_

@@ -6,8 +6,8 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'CCSE Open Source Mirrors',
-      description: 'In-campus open source mirror site supported by SUSTech Center for Computational Science and Engineering',
+      title: 'SUSTech Open Source Mirrors',
+      description: 'In-campus open source mirror site supported by SUSTech Center for Computational Science and Engineering & SUSTech Computer Research Association',
     }
   },
 
@@ -90,6 +90,7 @@ module.exports = {
     editLinkText: 'Edit on GitHub',
     search: false,
     lastUpdated: 'Last Updated',
+    logo: '/mirrors-logo.svg',
     serviceWorker: {
       updatePopup: true
     }
