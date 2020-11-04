@@ -77,8 +77,8 @@ module.exports = {
             link: 'http://hpc.sustech.edu.cn/'
           },
           {
-            text: 'SUSTech cra',
-            link: 'https://www.cra.moe/'
+            text: 'SUSTech CRA',
+            link: 'https://blog.sustcra.com/'
           }
         ],
         sidebar: {}
