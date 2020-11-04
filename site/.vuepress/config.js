@@ -43,6 +43,12 @@ module.exports = {
       },
     ],
     [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'G-0KD226TRZ5'
+      }
+    ],
+    [
       '@vuepress/last-updated',
       {
         transformer: (timestamp) => {
