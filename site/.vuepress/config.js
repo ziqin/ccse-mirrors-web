@@ -10,7 +10,19 @@ module.exports = {
       description: 'In-campus open source mirror site supported by SUSTech Center for Computational Science and Engineering & SUSTech Computer Research Association',
     }
   },
+  head: [
+    ['script', {
+        async: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-0KD226TRZ5'
+    }],
+    ['script', {}, `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'G-0KD226TRZ5');
+    `],
+  ],
   plugins: [
     [
       '@vuepress/blog',
@@ -41,12 +53,6 @@ module.exports = {
           importWorkboxFrom: 'local'
         }
       },
-    ],
-    [
-      '@vuepress/google-analytics',
-      {
-        'ga': 'G-0KD226TRZ5'
-      }
     ],
     [
       '@vuepress/last-updated',
