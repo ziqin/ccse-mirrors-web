@@ -42,19 +42,6 @@ module.exports = {
       }
     ],
     [
-      '@vuepress/pwa',
-      {
-        serviceWorker: true,
-        updatePopup: {
-          message: "手册内容有更新！",
-          buttonText: "刷新"
-        },
-        generateSWConfig: {
-          importWorkboxFrom: 'local'
-        }
-      },
-    ],
-    [
       '@vuepress/last-updated',
       {
         transformer: (timestamp) => {
