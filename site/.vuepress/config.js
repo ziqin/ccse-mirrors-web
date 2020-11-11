@@ -85,6 +85,10 @@ module.exports = {
             link: '/status/'
           },
           {
+            text: 'About',
+            link: '/about/'
+          },
+          {
             text: 'SUSTech CCSE',
             link: 'http://hpc.sustech.edu.cn/'
           },
