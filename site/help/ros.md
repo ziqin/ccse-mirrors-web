@@ -15,5 +15,5 @@ next: false
 Write the following settings to `/etc/apt/sources.list.d/ros-latest.list` if you are using Ubuntu 18.04 LTS. If you are using other version, you can change the version name "bionic" in the following code to your version name.
 
 ``` toml
-deb https://mirrors.sustech.rocks/ros/ubuntu/ bionic main
+deb https://mirrors.sustech.edu.cn/ros/ubuntu/ bionic main
 ```

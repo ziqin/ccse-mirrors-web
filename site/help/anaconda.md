@@ -19,8 +19,8 @@ You should connect to TaiYi using Login04 node.
 You can run the following commands in your terminal:
 
 ``` sh
-conda config --add channels https://mirrors.sustech.rocks/anaconda/pkgs/free/
-conda config --add channels https://mirrors.sustech.rocks/anaconda/pkgs/main/
+conda config --add channels https://mirrors.sustech.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.sustech.edu.cn/anaconda/pkgs/main/
 conda config --set show_channel_urls yes
 ```
 
@@ -28,8 +28,8 @@ Then a configuration file named `.condarc` will be created. And you can manually
 
 ``` toml
 channels:
-    - https://mirrors.sustech.rocks/anaconda/pkgs/free/
-    - https://mirrors.sustech.rocks/anaconda/pkgs/main/
+    - https://mirrors.sustech.edu.cn/anaconda/pkgs/free/
+    - https://mirrors.sustech.edu.cn/anaconda/pkgs/main/
 show_channel_urls: true
 ```
 

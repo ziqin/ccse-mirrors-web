@@ -8,4 +8,4 @@ next: false
 
 ## Configuration
 
-Open the file `/etc/apt/sources.list` and change all `http://archive.raspberrypi.org/` to `https://mirrors.sustech.rocks/raspbian/`
+Open the file `/etc/apt/sources.list` and change all `http://archive.raspberrypi.org/` to `https://mirrors.sustech.edu.cn/raspbian/`

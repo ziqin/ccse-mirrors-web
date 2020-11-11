@@ -11,7 +11,7 @@ next: false
 Run the following command in your terminal.
 
 ``` sh
-tlmgr update --all --repository https://mirrors.sustech.rocks/CTAN/systems/texlive/tlnet
+tlmgr update --all --repository https://mirrors.sustech.edu.cn/CTAN/systems/texlive/tlnet
 ```
 
 ## Change Settings Permanently
@@ -19,6 +19,6 @@ tlmgr update --all --repository https://mirrors.sustech.rocks/CTAN/systems/texli
 Run the following command in your terminal.
 
 ``` sh
-sudo tlmgr option repository https://mirrors.sustech.rocks/CTAN/systems/texlive/tlnet
+sudo tlmgr option repository https://mirrors.sustech.edu.cn/CTAN/systems/texlive/tlnet
 tlmgr update --all
 ```

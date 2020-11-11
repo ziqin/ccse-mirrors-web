@@ -15,12 +15,12 @@ next: false
 If you want to use the mirrors temporarily, you can just run the following line in your terminal, else you can change the environment variables.
 
 ``` sh
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.sustech.rocks/homebrew-bottles
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.sustech.edu.cn/homebrew-bottles
 ```
 
 ## Write Environment Variables
 
 ``` sh
-echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.sustech.rocks/homebrew-bottles' >> ~/.bash_profile
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.sustech.edu.cn/homebrew-bottles' >> ~/.bash_profile
 source ~/.bash_profile
 ```

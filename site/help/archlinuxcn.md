@@ -16,7 +16,7 @@ next: false
 
 ``` toml
 [archlinuxcn]
-Server = https://mirrors.sustech.rocks/archlinuxcn/$arch
+Server = https://mirrors.sustech.edu.cn/archlinuxcn/$arch
 ```
 
 之后安装 archlinuxcn-keyring 包以导入 GPG key：

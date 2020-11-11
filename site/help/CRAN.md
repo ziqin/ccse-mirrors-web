@@ -13,7 +13,7 @@ You should connect to TaiYi using Login04 node.
 ## Temporary Use
 
 ``` sh
-install.packages("<PackageName>", repos="https://mirrors.sustech.rocks/CRAN")
+install.packages("<PackageName>", repos="https://mirrors.sustech.edu.cn/CRAN")
 ```
 
 ## Change the Configuration File
@@ -21,7 +21,7 @@ install.packages("<PackageName>", repos="https://mirrors.sustech.rocks/CRAN")
 And you can manually create the configuration file and edit it with your text editor:
 
 ``` toml
-options("repos" = c(CRAN="https://mirrors.sustech.rocks/CRAN"))
+options("repos" = c(CRAN="https://mirrors.sustech.edu.cn/CRAN"))
 ```
 
 Path of the per-user configuration file:

@@ -19,10 +19,10 @@ sudo zypper mr -da
 ## 添加南科大镜像源，以 openSUSE Leap 42.3 为例：
 
 ``` sh
-sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.3/repo/oss SUSTC:42.3:OSS
-sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.3/repo/non-oss SUSTC:42.3:NON-OSS
-sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/update/leap/42.3/oss SUSTC:42.3:UPDATE-OSS
-sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/update/leap/42.3/non-oss SUSTC:42.3:UPDATE-NON-OSS
+sudo zypper ar -fcg https://mirrors.sustech.edu.cn/opensuse/distribution/leap/42.3/repo/oss SUSTC:42.3:OSS
+sudo zypper ar -fcg https://mirrors.sustech.edu.cn/opensuse/distribution/leap/42.3/repo/non-oss SUSTC:42.3:NON-OSS
+sudo zypper ar -fcg https://mirrors.sustech.edu.cn/opensuse/update/leap/42.3/oss SUSTC:42.3:UPDATE-OSS
+sudo zypper ar -fcg https://mirrors.sustech.edu.cn/opensuse/update/leap/42.3/non-oss SUSTC:42.3:UPDATE-NON-OSS
 ```
 
 命令中最后一个参数为每一个源指定了一个 alias （别称），可以根据个人喜好更改。

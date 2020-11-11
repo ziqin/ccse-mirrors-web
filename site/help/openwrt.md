@@ -17,5 +17,5 @@ OpenWRT（曾用名 LEDE）是一款广泛应用于路由器的嵌入式操作�
 执行如下命令自动替换
 
 ```
-sed -i 's_downloads.openwrt.org_mirrors.sustech.rocks/openwrt_' /etc/opkg/distfeeds.conf
+sed -i 's_downloads.openwrt.org_mirrors.sustech.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
 ```

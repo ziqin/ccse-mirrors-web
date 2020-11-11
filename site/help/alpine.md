@@ -17,8 +17,8 @@ Many people build their Docker images based on [alpine](https://hub.docker.com/_
 Suppose you are using Alpine Linux 3.10. You can write the following line to `/etc/apk/repositories`:
 
 ``` toml
-https://mirrors.sustech.rocks/alpine/v3.10/main
-https://mirrors.sustech.rocks/alpine/v3.10/community
+https://mirrors.sustech.edu.cn/alpine/v3.10/main
+https://mirrors.sustech.edu.cn/alpine/v3.10/community
 ```
 
 ## Use Mirror to Build Docker Image
@@ -28,8 +28,8 @@ You can also specify repositories in a Dockerfile:
 ``` docker
 FROM alpine:3.10
 
-RUN echo "https://mirrors.sustech.rocks/alpine/v3.10/main" > /etc/apk/repositories ; \
-    echo "https://mirrors.sustech.rocks/alpine/v3.10/community" >> /etc/apk/repositories ; \
+RUN echo "https://mirrors.sustech.edu.cn/alpine/v3.10/main" > /etc/apk/repositories ; \
+    echo "https://mirrors.sustech.edu.cn/alpine/v3.10/community" >> /etc/apk/repositories ; \
     # followed by your wonderful commands
 ```
 
