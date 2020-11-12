@@ -10,4 +10,10 @@
 ![Disk Throughput](/status/disk-light.png)
 
 ## Network Traffic
-![Network Traffic](/status/network-light.png)
+### Network Traffic (Last 24 Hours)
+![Network Traffic Last 24H](/status/network-light.png)
+
+### Network Traffic (Last 30 Days)
+![Network Traffic Last Few Days](/status/vnstat.png)
+
+![Network Traffic Last 30 Days](/status/vnstat-last-month.png)
