@@ -13,5 +13,9 @@ next: false
 - 邮件：[cra@sustech.edu.cn](mailto:cra@sustech.edu.cn)
 - 反馈问题：[CRA Commuinty 镜像站板块](https://c.cra.moe/c/cra-service/mirrors/9) （请使用学校邮箱注册）
 
+<img src="./tuna-sustech.svg" alt="W3C WAI-AA WCAG 2.1" width="400">
+
 <img src="./wcag2.1AA-blue-v.png" alt="W3C WAI-AA WCAG 2.1" width="88" height="32">
+
+
 
