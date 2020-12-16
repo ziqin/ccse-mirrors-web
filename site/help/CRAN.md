@@ -6,10 +6,6 @@ next: false
 
 # CRAN Mirror
 
-::: tip For TaiYi Users:
-You should connect to TaiYi using Login04 node.
-:::
-
 ## Temporary Use
 
 ``` sh
