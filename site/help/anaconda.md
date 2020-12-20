@@ -6,10 +6,6 @@ next: false
 
 # Anaconda Mirror
 
-::: tip For TaiYi Users:
-You should connect to TaiYi using Login04 node.
-:::
-
 ## Introduction
 
 > [Anaconda](https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)) is a free and open-source distribution of the Python and R programming languages for scientific computing (data science, machine learning applications, large-scale data processing, predictive analytics, etc.), that aims to simplify package management and deployment.
@@ -28,9 +24,21 @@ Then a configuration file named `.condarc` will be created. And you can manually
 
 ``` toml
 channels:
-    - https://mirrors.sustech.edu.cn/anaconda/pkgs/free/
-    - https://mirrors.sustech.edu.cn/anaconda/pkgs/main/
+  - defaults
 show_channel_urls: true
+channel_alias: https://mirrors.sustech.edu.cn/anaconda
+default_channels:
+  - https://mirrors.sustech.edu.cn/anaconda/pkgs/main
+  - https://mirrors.sustech.edu.cn/anaconda/pkgs/free
+  - https://mirrors.sustech.edu.cn/anaconda/pkgs/r
+  - https://mirrors.sustech.edu.cn/anaconda/pkgs/pro
+  - https://mirrors.sustech.edu.cn/anaconda/pkgs/msys2
+  - https://mirrors.sustech.edu.cn/anaconda/cloud/conda-forge
+  - https://mirrors.sustech.edu.cn/anaconda/cloud/msys2
+  - https://mirrors.sustech.edu.cn/anaconda/cloud/bioconda
+  - https://mirrors.sustech.edu.cn/anaconda/cloud/menpo
+  - https://mirrors.sustech.edu.cn/anaconda/cloud/pytorch
+  - https://mirrors.sustech.edu.cn/anaconda/cloud/simpleitk
 ```
 
 Path of the per-user configuration file:
