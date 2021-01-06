@@ -26,19 +26,19 @@ Then a configuration file named `.condarc` will be created. And you can manually
 channels:
   - defaults
 show_channel_urls: true
-channel_alias: https://mirrors.sustech.edu.cn/anaconda
 default_channels:
   - https://mirrors.sustech.edu.cn/anaconda/pkgs/main
   - https://mirrors.sustech.edu.cn/anaconda/pkgs/free
   - https://mirrors.sustech.edu.cn/anaconda/pkgs/r
   - https://mirrors.sustech.edu.cn/anaconda/pkgs/pro
   - https://mirrors.sustech.edu.cn/anaconda/pkgs/msys2
-  - https://mirrors.sustech.edu.cn/anaconda/cloud/conda-forge
-  - https://mirrors.sustech.edu.cn/anaconda/cloud/msys2
-  - https://mirrors.sustech.edu.cn/anaconda/cloud/bioconda
-  - https://mirrors.sustech.edu.cn/anaconda/cloud/menpo
-  - https://mirrors.sustech.edu.cn/anaconda/cloud/pytorch
-  - https://mirrors.sustech.edu.cn/anaconda/cloud/simpleitk
+custom_channels:
+  conda-forge: https://mirrors.sustech.edu.cn/anaconda/cloud
+  msys2: https://mirrors.sustech.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.sustech.edu.cn/anaconda/cloud
+  menpo: https://mirrors.sustech.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.sustech.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.sustech.edu.cn/anaconda/cloud
 ```
 
 Path of the per-user configuration file:
