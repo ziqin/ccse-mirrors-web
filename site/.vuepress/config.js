@@ -49,7 +49,13 @@ module.exports = {
         }
       }
     ],
-    '@vuepress/back-to-top'
+    '@vuepress/back-to-top',
+    [
+      'sitemap',
+      {
+        hostname: 'https://mirrors.sustech.edu.cn'
+      },
+    ]
   ],
 
   themeConfig: {
