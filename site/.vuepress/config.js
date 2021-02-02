@@ -7,7 +7,7 @@ module.exports = {
     '/': {
       lang: 'en-US',
       title: 'SUSTech Open Source Mirrors',
-      description: 'In-campus open source mirror site supported by SUSTech Center for Computational Science and Engineering & SUSTech Computer Research Association',
+      description: 'Open source mirror site supported by SUSTech Center for Computational Science and Engineering & SUSTech Computer Research Association',
     }
   },
   head: [
