@@ -15,7 +15,7 @@ next: false
 Write the following line to `/etc/pacman.d/mirrorlist`:
 
 ``` toml
-Server = http://mirrors.sustech.rocks/archlinux/stable/$repo/os/$arch
+Server = http://mirrors.sustech.rocks/archlinux/$repo/os/$arch
 ```
 
 ## Update Repository Indexes
