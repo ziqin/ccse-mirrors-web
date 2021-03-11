@@ -19,3 +19,5 @@ next: false
 
 
 
+*欲查看更多镜像，请前往教育网镜像站导航站点 [MirrorZ](https://mirrorz.org/)。*
+
