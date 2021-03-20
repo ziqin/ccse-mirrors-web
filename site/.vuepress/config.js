@@ -93,7 +93,7 @@ module.exports = {
         sidebar: {}
       }
     },
-    docsRepo: 'ziqin/ccse-mirrors-web',
+    docsRepo: 'SUSTech-CRA/ccse-mirrors-web',
     docsDir: 'site',
     editLinks: true,
     editLinkText: 'Edit on GitHub',
