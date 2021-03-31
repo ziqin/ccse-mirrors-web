@@ -76,6 +76,8 @@ export default {
     .meta
       font-style italic
       color lighten($textColor, 20%)
+      @media (prefers-color-scheme: dark)
+        color lighten($textDarkColor, 20%)
 
     ul
       margin 0
@@ -86,6 +88,8 @@ export default {
       li
         padding 0.5rem 0
         border-bottom 1px solid alpha($textColor, 10%)
+        @media (prefers-color-scheme: dark)
+          border-bottom 1px solid alpha($textDarkColor, 10%)
 
         .quote-icon
           margin-left -1.5rem
@@ -94,6 +98,8 @@ export default {
         
         .news-title
           color $textColor
+          @media (prefers-color-scheme: dark)
+            color $textDarkColor
 
           &:hover
             color $accentColor
